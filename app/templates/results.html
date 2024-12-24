@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="/static/images/logo.png">
+
+</head>
+<body>
+    <div class="top-nav">
+        <div class="top-nav-content">
+            <h2 class="small-logo"><div class="purple">B</div>oltz</h2>
+            <div class="search-container">
+                <form class="form" method="POST" action="/search">
+                    <input class="form-results" type="text" name="query" placeholder="Search Boltz" required>
+                    <button type="submit"><i id="icon" class="fas fa-search search-icon"></i></button>
+                </form>
+                <!-- Shortcuts directly under the input -->
+                <div class="shortcuts">
+                    <a href="#" class="activeShortcut">All</a>
+                    <a href="#">Images</a>
+                    <a href="#">Videos</a>
+                    <a href="#">News</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>    
+    <br>    
+    <br>    
+    <br>  
+    <br>    
+    <br>    
+    <br> 
+    <hr />
+    <p class="search-results-for">Search Results for "{{ query }}"</p>
+    {% if results %}
+        <ul>
+            {% for result in results %}
+                <div class="results">
+                    <li>
+                        <div class="title-url">
+                            <span class="title">{{ result.title }}</span>
+                            <span class="url">{{ result.url }}</span>
+                        </div>
+                        <br>
+                        <a href="{{ result.url }}">{{ result.title }}</a>
+                        <p class="description">{{ result.content }}</p>
+                        <br>
+                    </li>
+                </div>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+    <script>
+        const topNav = document.querySelector('.top-nav');
+        const shortcuts = document.querySelector('.shortcuts');
+        const smallLogo = document.querySelector('.small-logo')
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                topNav.classList.add('scrolled');
+                shortcuts.classList.add('hidden');
+                topNav.style.height = "60px";
+                smallLogo.style.marginTop = "60px";
+            } else {
+                topNav.classList.remove('scrolled');
+                shortcuts.classList.remove('hidden');
+                topNav.style.height = "100px";
+                smallLogo.style.marginBottom = "90px"
+            }
+        });
+    </script>
+</body>
+</html>

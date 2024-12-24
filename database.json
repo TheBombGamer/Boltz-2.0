@@ -1,0 +1,133 @@
+{
+    "pages": [
+        {
+            "url": "https://www.w3schools.com",
+            "title": "W3Schools Online Web Tutorials",
+            "content": "Learn web development with HTML, CSS, JavaScript, SQL, Python, and more!"
+        },
+        {
+            "url": "https://developer.mozilla.org/en-US/",
+            "title": "MDN Web Docs",
+            "content": "MDN Web Docs is an open-source resource for developers, covering web standards, APIs, and JavaScript documentation."
+        },
+        {
+            "url": "https://www.freecodecamp.org",
+            "title": "freeCodeCamp",
+            "content": "freeCodeCamp is a community that helps you learn to code for free through interactive lessons and coding challenges.",
+            "CEO": "None",
+            "COMPANYTYPE": "Non-profit",
+            "founders": "Founder: Quincy Larson"
+        },
+        {
+            "url": "https://www.javascript.com",
+            "title": "JavaScript.com",
+            "content": "JavaScript.com is a great place to start your journey with JavaScript and learn the basics of the language."
+        },
+        {
+            "url": "https://css-tricks.com",
+            "title": "CSS-Tricks",
+            "content": "CSS-Tricks provides tips, tricks, and techniques on how to use CSS, along with general front-end web development."
+        },
+        {
+            "url": "https://stackoverflow.com",
+            "title": "Stack Overflow",
+            "content": "Stack Overflow is a Q&A site for programmers to find solutions to coding problems and ask technical questions."
+        },
+        {
+            "url": "https://gitlab.com",
+            "title": "GitLab",
+            "content": "GitLab is a web-based DevOps lifecycle tool that provides a Git repository manager and issue tracking system."
+        },
+        {
+            "url": "https://github.com",
+            "title": "GitHub",
+            "content": "GitHub is a platform for version control and collaboration, allowing multiple people to work on projects at once.",
+            "CEO": "CEO: Thomas Dohmke (Nov 15, 2021)",
+            "COMPANYTYPE": "Software company",
+            "parentOrganization": "None",
+            "founders": "Founders: Chris Wanstrath, Scott Chacon, Tom Preston-Werner, P. J. Hyett"
+        },
+        {
+            "url": "https://www.codecademy.com",
+            "title": "Codecademy",
+            "content": "Codecademy offers online coding courses for learning various programming languages and technologies."
+        },
+        {
+            "url": "https://www.heroku.com",
+            "title": "Heroku",
+            "content": "Heroku is a platform as a service (PaaS) for building, running, and deploying apps in various programming languages."
+        },
+        {
+            "url": "https://www.google.com",
+            "title": "Google",
+            "content": "Google is a search engine that allows users to search for websites, images, videos, and other online content.",
+            "CEO": "Sundar Pichai (Oct 2, 2015)",
+            "COMPANYTYPE": "IT Corporation",
+            "parentOrganization": "Alphabet Inc.",
+            "founders": "Larry Page, Sergey Brin"
+        },        
+        {
+            "url": "https://www.youtube.com",
+            "title": "YouTube",
+            "content": "YouTube is a platform for uploading, sharing, and watching videos, as well as a hub for educational content and entertainment."
+        },
+        {
+            "url": "https://www.wikipedia.org",
+            "title": "Wikipedia",
+            "content": "Wikipedia is a free, open-source encyclopedia that allows users to edit and contribute to articles."
+        },
+        {
+            "url": "https://www.amazon.com",
+            "title": "Amazon",
+            "content": "Amazon is an e-commerce platform that sells a wide variety of products ranging from electronics to books."
+        },
+        {
+            "url": "https://www.reddit.com",
+            "title": "Reddit",
+            "content": "Reddit is a platform for online discussions, news aggregation, and social media interaction across various topics."
+        },
+        {
+            "url": "https://www.trello.com",
+            "title": "Trello",
+            "content": "Trello is a web-based project management tool that allows users to organize tasks using boards, lists, and cards."
+        },
+        {
+            "url": "https://www.figma.com",
+            "title": "Figma",
+            "content": "Figma is a cloud-based design tool that helps teams collaborate on creating UI/UX designs and prototypes."
+        },
+        {
+            "url": "https://khanacademy.org",
+            "title": "Khan Academy",
+            "content": "Khan Academy provides free online courses, lessons, and practice in subjects including programming and computer science."
+        },
+        {
+            "url": "https://code.visualstudio.com",
+            "title": "Visual Studio Code",
+            "content": "Visual Studio Code is a popular code editor that supports debugging, syntax highlighting, and extensions for multiple languages."
+        },
+        {
+            "url": "https://www.hackerrank.com",
+            "title": "HackerRank",
+            "content": "HackerRank is a platform for coding practice, technical interviews, and learning algorithms and data structures."
+        },
+        {
+            "url": "https://www.geeksforgeeks.org",
+            "title": "GeeksforGeeks",
+            "content": "GeeksforGeeks is a computer science portal that provides tutorials, algorithms, and programming interview prep materials."
+        },
+        {
+            "url": "https://www.pokemon.com/us",
+            "title": "Pokemon.com: The Official Pokémon Website",
+            "content": "Featured Pokémon · Stonjourner 874 · Cosmog 789 · Shroomish 285 · Iron Valiant 1006 · Milotic 350 · Nidoqueen 31 · Mewtwo 150 · Salandit 757."
+        },
+        {
+            "url": "https://ballcraft.cc",
+            "title": "Ballcraft | Home",
+            "content": "BallCraft | Home Page. ... VOTE. Welcome to BallCraft official website! PLAYERS ONLINE: 12. JAVA IP: mc.ballcraft.cc. EAGLER IP: wss://ballcraft.cc/"
+        }
+    ]
+}
+
+
+
