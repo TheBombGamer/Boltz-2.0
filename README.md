@@ -3,6 +3,7 @@ A python search engine
 
 # Getting Started:
 type these 3 commands:
+
 `ls -l app/templates/`
 
 `chmod 755 app/templates/`
