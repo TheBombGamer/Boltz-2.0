@@ -1,5 +1,18 @@
+import os
+import dotenv
+from dotenv import load_dotenv
+import SQLAlchemy
+
+
 class Config:
+    SECRET_KEY = os.environ.get('SECRET_KEY')    
+    DATABASE_URL = os.environ.get('DATABASE_URL')
+    DEBUG = os.environ.get('DEBUG')
     
-    SECRET_KEY = "your_secret_key"  # Replace with a secure key for session management
-    DATABASE_FILE = "database.json"  # Path to the database file
-    DEBUG = False
+    SQLALCHEMY_DATABASE_URI = DATABASE_URL
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_ECHO = True
+    SQLALCHEMY_POOL_SIZE = 100
+    SQLALCHEMY_MAX_OVERFLOW = 100
+    SQLALCHEMY_POOL_RECYCLE = 1800
+    SQLALCHEMY_POOL_TIMEOUT = 30

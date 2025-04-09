@@ -9,42 +9,66 @@
     <link rel="icon" href="/static/images/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
-    <div class="relative mb-6">
-        <button class="bg-blue-500 text-white p-2 rounded-full shadow-lg" id="toggleButton">
+<body class="bg-gray-900 flex flex-col items-center justify-center min-h-screen text-white relative">
+    <!-- Toggle Button at the top right corner -->
+    <div class="absolute top-4 right-4">
+        <button class="bg-blue-600 text-white p-3 rounded-full shadow-lg text-2xl" id="toggleButton">
             <i class="fa-solid fa-th"></i>
         </button>
-        <div class="absolute hidden bg-white shadow-lg rounded-lg p-4 mt-2" id="popup">
-            <p class="text-gray-700">Services Will Be Displayed Here</p>
-            <div class="flex flex-col mt-2">
-                <div class="flex items-center mb-2">
-                    <img src="/static/images/logo.png" width="50" height="50" class="mr-2">
-                    <a href='/static/templates/index.html' class="text-blue-500 hover:underline">Search</a>
-                </div>
-                <div class="flex items-center">
-                    <img src="/static/images/discord.png" width="50" height="50" class="mr-2">
-                    <a href="https://discord.gg/WpQaHKnDkA" class="text-blue-500 hover:underline">Discord</a>
-                </div>
-            </div>
+    </div>
+
+<!-- Floating Menu -->
+<div class="floating-menu hidden fixed top-6 right-8 bg-gray-800 rounded-lg shadow-lg p-4" id="floatingMenu">
+    <div class="icon-grid grid grid-cols-2 gap-4">
+        <div class="icon-item text-center">
+            <img src="https://via.placeholder.com/50" alt="Icon 1" class="mx-auto mb-2">
+            <p>Item 1</p>
+        </div>
+        <div class="icon-item text-center">
+            <img src="https://via.placeholder.com/50" alt="Icon 2" class="mx-auto mb-2">
+            <p>Item 2</p>
+        </div>
+        <div class="icon-item text-center">
+            <img src="https://via.placeholder.com/50" alt="Icon 3" class="mx-auto mb-2">
+            <p>Item 3</p>
+        </div>
+        <div class="icon-item text-center">
+            <img src="https://via.placeholder.com/50" alt="Icon 4" class="mx-auto mb-2">
+            <p>Item 4</p>
         </div>
     </div>
+</div>
+
+<!-- Title -->
     <div class="text-center mb-6">
         <h3 class="text-4xl font-bold">
-            <span class="text-purple-600">B</span>oltz
+            <span class="text-purple-500">B</span>oltz
         </h3>
         <form class="mt-4" method="POST" action="/search">
             <div class="flex items-center">
-                <input class="border border-gray-300 rounded-l-md p-2 w-64" type="text" name="query" placeholder="Search Boltz" required>
-                <button type="submit" class="bg-blue-500 text-white p-2 rounded-r-md">
+                <input class="border border-gray-600 bg-gray-800 text-white rounded-l-md p-2 w-64" type="text" name="query" placeholder="Search Boltz" required>
+                <button type="submit" class="bg-blue-600 text-white p-2 rounded-r-md hover:bg-blue-700 transition duration-300">
                     <i id="icon" class="fas fa-search"></i>
                 </button>
             </div>
         </form>
     </div>
     <div class="flex space-x-4 mt-6">
-        <a class="text-blue-500 hover:underline" href="#">How It Works</a>
-        <a class="text-blue-500 hover:underline" href="https://2r5w93yy.live.codepad.app/index.html">Terms</a>
+        <a class="text-blue-400 hover:underline" href="#">How It Works</a>
+        <a class="text-blue-400 hover:underline" href="https://kyle-hosting.xyz/privacypolicy.html">Privacy Policy</a>
     </div>
-    <script src="/static/js/script.js"></script>
+
+    <script>
+        const button = document.getElementById('toggleButton');
+        const floatingMenu = document.getElementById('floatingMenu');
+
+        button.addEventListener('click', () => {
+            if (floatingMenu.classList.contains('hidden')) {
+                floatingMenu.classList.remove('hidden');
+            } else {
+                floatingMenu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>

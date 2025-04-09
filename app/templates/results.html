@@ -4,63 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="/static/images/logo.png">
-
 </head>
-<body>
-    <div class="top-nav">
-        <div class="top-nav-content">
-            <h2 class="small-logo"><div class="purple">B</div>oltz</h2>
-            <div class="search-container">
-                <form class="form" method="POST" action="/search">
-                    <input class="form-results" type="text" name="query" placeholder="Search Boltz" required>
-                    <button type="submit"><i id="icon" class="fas fa-search search-icon"></i></button>
+<body class="bg-gray-900 text-white">
+    <div class="top-nav bg-gray-800 p-4">
+        <div class="top-nav-content flex items-center justify-between">
+            <h2 class="small-logo text-2xl font-bold"><span class="text-purple-500">B</span>oltz</h2>
+            <div class="search-container flex items-center">
+                <form class="form flex" method="POST" action="/search">
+                    <input class="form-results bg-gray-700 text-white border border-gray-600 rounded-l px-4 py-2" type="text" name="query" placeholder="Search Boltz" required>
+                    <button type="submit" class="bg-purple-600 text-white rounded-r px-4 py-2 hover:bg-purple-700 transition duration-300">
+                        <i id="icon" class="fas fa-search"></i>
+                    </button>
                 </form>
-                <!-- Shortcuts directly under the input -->
-                <div class="shortcuts">
-                    <a href="#" class="activeShortcut">All</a>
-                    <a href="#">Images</a>
-                    <a href="#">Videos</a>
-                    <a href="#">News</a>
+                <div class="shortcuts ml-4">
+                    <a href="#" class="text-purple-500 font-semibold">All</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Images</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Videos</a>
+                    <a href="#" class="text-gray-400 hover:text-white">News</a>
                 </div>
             </div>
         </div>
     </div>
-    <br>    
-    <br>    
-    <br>    
-    <br>  
-    <br>    
-    <br>    
-    <br> 
-    <hr />
-    <p class="search-results-for">Search Results for "{{ query }}"</p>
-    {% if results %}
-        <ul>
-            {% for result in results %}
-                <div class="results">
-                    <li>
-                        <div class="title-url">
-                            <span class="title">{{ result.title }}</span>
-                            <span class="url">{{ result.url }}</span>
-                        </div>
-                        <br>
-                        <a href="{{ result.url }}">{{ result.title }}</a>
-                        <p class="description">{{ result.content }}</p>
-                        <br>
-                    </li>
-                </div>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No results found.</p>
-    {% endif %}
+    <br>
+    <hr class="border-gray-700" />
+    <p class="search-results-for text-center mt-4">Search Results for "{{ query }}"</p>
+    <div class="container mx-auto mt-6">
+        {% if results %}
+            <ul class="space-y-4">
+                {% for result in results %}
+                    <div class="results bg-gray-800 p-4 rounded-lg shadow-md">
+                        <li>
+                            <div class="title-url mb-2">
+                                <span class="title font-bold">{{ result.title }}</span>
+                                <span class="url text-gray-400 block">{{ result.url }}</span>
+                            </div>
+                            <a href="{{ result.url }}" class="text-blue-400 hover:underline">{{ result.title }}</a>
+                            <p class="description text-gray-300 mt-2">{{ result.content }}</p>
+                        </li>
+                    </div>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-center text-gray-400">No results found.</p>
+        {% endif %}
+    </div>
     <script>
         const topNav = document.querySelector('.top-nav');
         const shortcuts = document.querySelector('.shortcuts');
-        const smallLogo = document.querySelector('.small-logo')
+        const smallLogo = document.querySelector('.small-logo');
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 10) {
@@ -72,7 +66,7 @@
                 topNav.classList.remove('scrolled');
                 shortcuts.classList.remove('hidden');
                 topNav.style.height = "100px";
-                smallLogo.style.marginBottom = "90px"
+                smallLogo.style.marginBottom = "90px";
             }
         });
     </script>
