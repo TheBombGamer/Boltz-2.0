@@ -10,13 +10,11 @@ def tokenize(text):
     Returns:
         list: A list of normalized tokens (words).
     """
-    # Convert text to lowercase
+    
     text = text.lower()
     
-    # Remove punctuation and special characters
     text = re.sub(r'[^\w\s]', '', text)
     
-    # Split the text into individual words (tokens)
     tokens = text.split()
     
     return tokens

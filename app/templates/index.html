@@ -7,39 +7,44 @@
     <meta name="description" content="Boltz, A fast and reliable search engine">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="/static/images/logo.png">
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="button-container">
-        <button class="button" id="toggleButton"><i class="fa-solid fa-th"></i>
-        </i>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <div class="relative mb-6">
+        <button class="bg-blue-500 text-white p-2 rounded-full shadow-lg" id="toggleButton">
+            <i class="fa-solid fa-th"></i>
         </button>
-        <div class="popup" id="popup">
-            <p>Services Will Be Displayed Here</p>
-            <div class="cards">
-                <div class="card">
-                    <img src="/static/images/logo.png" width="50" height="50">
-                    <a href='/static/templates/index.html'>Search</a>
+        <div class="absolute hidden bg-white shadow-lg rounded-lg p-4 mt-2" id="popup">
+            <p class="text-gray-700">Services Will Be Displayed Here</p>
+            <div class="flex flex-col mt-2">
+                <div class="flex items-center mb-2">
+                    <img src="/static/images/logo.png" width="50" height="50" class="mr-2">
+                    <a href='/static/templates/index.html' class="text-blue-500 hover:underline">Search</a>
                 </div>
-                <div class="card">
-                    <img src="/static/images/discord.png" width="50" hight="50">
-                    <a href="https://discord.gg/WpQaHKnDkA">Discord</a>
+                <div class="flex items-center">
+                    <img src="/static/images/discord.png" width="50" height="50" class="mr-2">
+                    <a href="https://discord.gg/WpQaHKnDkA" class="text-blue-500 hover:underline">Discord</a>
                 </div>
             </div>
         </div>
-    </div>    
-    <div class="input-container">
-        <h3 class="logo"><div class="purple">B</div>oltz</h3>
-        <form class="form" method="POST" action="/search">
-            <input class="input" type="text" name="query" placeholder="Search Boltz" required>
-            <button type="submit"><i id="icon" class="fas fa-search search-icon"></i></button>
+    </div>
+    <div class="text-center mb-6">
+        <h3 class="text-4xl font-bold">
+            <span class="text-purple-600">B</span>oltz
+        </h3>
+        <form class="mt-4" method="POST" action="/search">
+            <div class="flex items-center">
+                <input class="border border-gray-300 rounded-l-md p-2 w-64" type="text" name="query" placeholder="Search Boltz" required>
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded-r-md">
+                    <i id="icon" class="fas fa-search"></i>
+                </button>
+            </div>
         </form>
     </div>
-    <div class="bottom-bar">
-        <a class="bottom-bar-a">How It Works</a>
-        <a class="bottom-bar-a" href="https://2r5w93yy.live.codepad.app/index.html">Terms</a>
+    <div class="flex space-x-4 mt-6">
+        <a class="text-blue-500 hover:underline" href="#">How It Works</a>
+        <a class="text-blue-500 hover:underline" href="https://2r5w93yy.live.codepad.app/index.html">Terms</a>
     </div>
     <script src="/static/js/script.js"></script>
-
 </body>
 </html>

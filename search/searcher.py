@@ -13,7 +13,6 @@ def perform_search(query):
                 "url": page["url"],
                 "content": page["content"]
             })
-    
-    # Rank the results
+            
     ranked_results = rank_results(query, results)
     return ranked_results

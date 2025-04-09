@@ -5,7 +5,6 @@ This package contains modules for handling query tokenization,
 ranking, and performing searches on indexed pages.
 """
 
-# Import key functions to simplify usage
 from .tokenizer import tokenize, query_to_tokens
 from .searcher import perform_search
 from .ranker import rank_results

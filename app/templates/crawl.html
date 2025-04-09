@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Crawler</title>
+</head>
+<body>
+    <h1>Welcome to the Web Crawler</h1>
+    
+    <h2>Search</h2>
+    <form action="/search" method="POST">
+        <input type="text" name="query" placeholder="Search..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    <h2>Crawl a URL</h2>
+    <form action="/crawl" method="POST">
+        <input type="text" name="url" placeholder="Enter URL to crawl" required>
+        <button type="submit">Crawl</button>
+    </form>
+</body>
+</html>

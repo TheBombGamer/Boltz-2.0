@@ -58,15 +58,6 @@
             "content": "Heroku is a platform as a service (PaaS) for building, running, and deploying apps in various programming languages."
         },
         {
-            "url": "https://www.google.com",
-            "title": "Google",
-            "content": "Google is a search engine that allows users to search for websites, images, videos, and other online content.",
-            "CEO": "Sundar Pichai (Oct 2, 2015)",
-            "COMPANYTYPE": "IT Corporation",
-            "parentOrganization": "Alphabet Inc.",
-            "founders": "Larry Page, Sergey Brin"
-        },        
-        {
             "url": "https://www.youtube.com",
             "title": "YouTube",
             "content": "YouTube is a platform for uploading, sharing, and watching videos, as well as a hub for educational content and entertainment."
@@ -120,11 +111,6 @@
             "url": "https://www.pokemon.com/us",
             "title": "Pokemon.com: The Official Pokémon Website",
             "content": "Featured Pokémon · Stonjourner 874 · Cosmog 789 · Shroomish 285 · Iron Valiant 1006 · Milotic 350 · Nidoqueen 31 · Mewtwo 150 · Salandit 757."
-        },
-        {
-            "url": "https://ballcraft.cc",
-            "title": "Ballcraft | Home",
-            "content": "BallCraft | Home Page. ... VOTE. Welcome to BallCraft official website! PLAYERS ONLINE: 12. JAVA IP: mc.ballcraft.cc. EAGLER IP: wss://ballcraft.cc/"
         }
     ]
 }
