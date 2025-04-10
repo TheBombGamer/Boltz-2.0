@@ -1,5 +1,4 @@
 flask
 beautifulsoup4
-socket
 SQLAlchemy
 dotenv
