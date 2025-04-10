@@ -2,7 +2,7 @@ from crawler.storage import get_all_pages
 from search.ranker import rank_results
 
 def perform_search(query):
-    """Search for pages containing the query and rank the results."""
+    
     pages = get_all_pages()
     results = []
 
